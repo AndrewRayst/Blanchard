@@ -32,7 +32,13 @@ export default ( Swiper, SwiperCore ) => {
 			668: {
 				slidesPerView: 2,
 				slidesPerGroup: 2,
-				spaceBetween: 38,
+				spaceBetween: 32,
+			},
+
+			924: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 44,
 			},
 
 			1630: {
@@ -87,13 +93,13 @@ export default ( Swiper, SwiperCore ) => {
 
 		const width = window.innerWidth
 
-		if ( width < 1630 ) {
+		// if ( width < 1630 ) {
 
-			return 2
+		// 	return 2
 
-		}
+		// }
 
-		else if ( width < 668 ) {
+		if ( width < 668 ) {
 
 			return 2
 

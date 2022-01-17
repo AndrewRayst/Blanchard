@@ -11,11 +11,11 @@ import '../../../modules/css/taby.min.css'
 
 // import package from node_modules
 
-import tippy from 'tippy.js';
-import SimpleBar from 'simplebar';
+import tippy from 'tippy.js'
+import SimpleBar from 'simplebar'
 
-import Swiper from 'swiper';
-import SwiperCore, { Navigation, Pagination } from 'swiper/core';
+import Swiper from 'swiper'
+import SwiperCore, { Navigation, Pagination } from 'swiper/core'
 
 import Сhoices from 'choices.js'
 import Inputmask from 'inputmask'
@@ -41,10 +41,10 @@ SwiperCore.use([Navigation, Pagination])
 
 document.addEventListener( `DOMContentLoaded`, () => {
 
-	Taby(`.catalog__languages-panels`, `.catalog__languages-btns`)
+	Taby( `.catalog__languages-panels`, `.catalog__languages-btns` )
 
 	header( SimpleBar )
-	hero( Swiper )
+	hero( )
 	gallery( Swiper, SwiperCore, Сhoices )
 	events( Swiper, SwiperCore )
 	contacts( Inputmask )

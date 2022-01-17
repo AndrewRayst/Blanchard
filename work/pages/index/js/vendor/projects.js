@@ -21,6 +21,12 @@ export default ( Swiper, SwiperCore, tippy ) => {
 				spaceBetween: 28,
 			},
 
+			924: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 50,
+			},
+
 			1025: {
 				slidesPerView: 3,
 				slidesPerGroup: 3,
@@ -63,7 +69,7 @@ export default ( Swiper, SwiperCore, tippy ) => {
 
 		const width = window.innerWidth
 
-		if ( width < 1024 ) {
+		if ( width <= 1024 ) {
 
 			return 2
 

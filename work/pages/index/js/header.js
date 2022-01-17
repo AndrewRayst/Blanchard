@@ -65,13 +65,13 @@ export default () => {
 
 		if ( mode === `on` ) {
 	
-			let tabIndex = 700
+			let indexStart = 700
 	
 			for ( let index = 0; index < items.length; index++ ) {
 	
-				items[index].tabIndex = tabIndex
+				items[index].tabIndex = indexStart
 	
-				++tabIndex
+				++indexStart
 	
 			}
 	
@@ -130,7 +130,7 @@ export default () => {
 			groupCurrent.classList.add( 'group--active' )
 
 			groupCurrentContent.style.maxHeight = `300px`
-			groupCurrentContent.style.padding = `32px 19px 40px 40px`
+			groupCurrentContent.style.padding = `36px 19px 40px 40px`
 
 			groupTabindex( event.currentTarget, `on` )
 

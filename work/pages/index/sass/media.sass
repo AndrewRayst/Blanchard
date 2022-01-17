@@ -4,7 +4,7 @@
 
 	// header
 	.nav__item:not(:last-child)
-		margin-right: 24px
+		margin-right: 1vw
 
 	.group
 		display: flex
@@ -40,16 +40,27 @@
 
 	// gallery
 
-	.gallerySwiper
-		width: 100%
+	.gallery
+		&-modal
+			padding: 15% 18.5% 11%
+
+		&Swiper
+			width: 100%
 
 	// catalog
+
 	.accordion
+		&__item:first-child
+			margin-bottom: 0
+
+		&__content
+			padding: 28px 0
+
 		&__creator
 			position: relative
 
 			flex: 0 1 50%
-			line-height: 26px
+			line-height: 25px
 
 	// events
 	.events
@@ -262,7 +273,7 @@
 	// catalog
 
 	.catalog
-		margin-bottom: 86px
+		margin-bottom: 92px
 
 		&__heading
 			margin-bottom: 26px
@@ -353,7 +364,7 @@
 			padding-left: 0px !important
 
 		&__inner
-			padding-bottom: 80px
+			padding-bottom: 79px
 
 		&__heading
 			margin-bottom: 30px
@@ -363,6 +374,9 @@
 
 		&__legend
 			font-size: 17px
+
+			&--cost
+				margin-bottom: 16px !important
 
 		&-slide
 			img
@@ -383,10 +397,10 @@
 		padding-top: 0
 
 		&__heading
-			margin-bottom: 23px !important
+			margin-bottom: 25px !important
 
 			&--mini
-				// margin-bottom: 28px !important
+				margin-bottom: 27px !important
 
 		&__paragraph
 			margin-bottom: 24px
@@ -395,10 +409,16 @@
 			width: 100%
 			height: 128px
 
+		&__button--prev
+			margin-right: 21px
+
+		&__button--next
+			margin-left: 21px
+
 	// contacts
 	.contacts
 		&__inner
-			margin-bottom: 10px
+			margin-bottom: 8px
 
 		&__menu
 			flex: 0 1 p(487, 1024)
@@ -555,6 +575,7 @@
 
 		&__inner
 			display: block
+
 			padding-top: 104px
 			padding-bottom: 68px
 
@@ -579,7 +600,7 @@
 			margin-bottom: 364px
 
 		&-modal
-			padding: 53.4% 6.5% 13.5%
+			padding: 76.2vh 6.5% 13.2%
 
 			&__img
 				flex: 0 1 94%
@@ -644,18 +665,21 @@
 			flex-direction: column-reverse
 
 		&-accordion
-			margin-bottom: 84px
+			margin-bottom: 54px
 
 	.accordion
+		&__item:first-child
+			margin-bottom: 30px
+
 		&__creator
 			flex: 0 1 33%
 
 	// events
 	.events
-		margin-bottom: 192px !important
+		margin-bottom: 190px !important
 
 		&__heading
-			margin-bottom: 22px
+			margin-bottom: 26px
 
 			&--mini
 				margin-bottom: 1px
@@ -700,12 +724,14 @@
 
 	// edition
 	.edition
+		margin-bottom: 90px
+
 		&__inner
 			flex-direction: column
 			padding-top: 92px
-			padding-bottom: 50px
+			padding-bottom: 51px
 
-			margin-bottom: 88px
+			margin-bottom: 0px
 
 		&__heading
 			margin-bottom: 32px
@@ -784,13 +810,13 @@
 	//projects
 
 	.projects
-		margin-bottom: 76px
+		margin-bottom: 88px
 
 		&__heading
 			margin-bottom: 23px !important
 
 			&--mini
-				margin-bottom: 22px !important
+				margin-bottom: 32px !important
 
 		&__paragraph
 			width: 99%
@@ -799,8 +825,23 @@
 		&__link
 			display: block
 
-		&__button
-			margin: 0
+		&__slide
+			overflow: hidden
+
+			img
+				width: 117%
+				height: 100%
+
+				transform: translateX(-18px)
+
+		&__button--prev
+			margin-right: 21px
+
+		&__button--next
+			margin-left: 21px
+
+		&__partners
+			height: 108px
 
 	// contacts
 	.contacts
@@ -824,7 +865,7 @@
 
 		&__map
 			flex: 0 1 p(338, 768)
-			height: 703px !important
+			height: 700px !important
 
 		&__btn
 			padding: 17px 32px
@@ -870,10 +911,43 @@
 		.swiper__btns
 			justify-content: center
 
+		&-modal
+			padding: 30vh 6.5% 13.2%
+
+			&__inner
+				height: inherit
+				flex-direction: column
+
+			&__img
+				flex: 0 1 70%
+				margin-right: 0
+
+				img
+					width: 145%
+					transform: translateX(-12.5%)
+
+			&__info
+				flex: 0 1 30%
+				padding: 7% 3%
+
+			&__exit
+				top: .3%
+
+				z-index: 1
+
+			&__since
+				margin-bottom: 5%
+
+			&__description
+				width: 99%
+
 	// events
 	.events
 		&__cards
 			display: block
+
+		&__card
+			margin-bottom: 45px
 
 		&__img
 			height: auto
@@ -1085,8 +1159,9 @@
 
 				transform: translate(-30%, -18%)
 
-		// &__inner
-		// 	overflow: visible
+		.logo
+			&__link
+				margin-left: 4%
 
 	.signIn__text
 		font-size: 12px
@@ -1174,13 +1249,13 @@
 
 	// hero
 	.hero
-		margin-bottom: 16%
+		margin-bottom: 17.2%
 
 		&-swiper--container
 			height: 355px
 
 		&__inner
-			padding: 76px 0 13% 0
+			padding: 76px 0 11.5% 0
 
 		&__title
 			width: 100%
@@ -1276,49 +1351,34 @@
 			margin-top: 0px
 
 		&-modal
-			display: none
-			padding: 92% 4.5% 0%
-
-			&__exit
-				z-index: 1
-				top: -0.6%
-				right: -1.1%
+			padding: 54.5vh 5% 0%
 
 			&__inner
-				display: block
+				height: 107%
+				flex-direction: column
 
 			&__img
-				height: 33%
-
+				flex: 0 1 auto
 				margin-right: 0
-				margin-bottom: 8%
-
-				// overflow: hidden
 
 				img
 					width: 100%
-					height: 130%
-
-					transform: translateY(-21%)
+					height: 162%
+					transform: translateY(-23%)
 
 			&__info
-				padding: 0 20px
-				height: 60%
+				flex: 0 1 auto
+				padding: 6.3% 6.1%
 
-			&__name
-				margin-bottom: 2%
-
-				// transform: translateX(3px)
-
-			&__author
-				margin-bottom: 2%
+			&__exit
+				top: -.9%
+				right: -2%
 
 			&__since
-
-				margin-bottom: 3%
+				margin-bottom: 5%
 
 			&__description
-				width: 99%
+				width: 98%
 
 	.swiper__btns
 		transform: translateY(32%)
@@ -1326,7 +1386,7 @@
 	// catalog
 
 	.catalog
-		margin-bottom: 60px
+		margin-bottom: 62px
 
 		&__languages
 			transform: translate(0px)
@@ -1352,10 +1412,10 @@
 			display: none
 
 		&-accordion
-			margin-bottom: 52px
+			margin-bottom: 50px
 
 		&__img
-			margin-bottom: 17px
+			margin-bottom: 20px
 
 		&__heading--mini
 			margin-bottom: 16px
@@ -1365,6 +1425,9 @@
 			width: 98%
 
 	.accordion
+		&__item:first-child
+			margin-bottom: 0
+
 		&__heading
 			font-size: 18px
 
@@ -1379,7 +1442,7 @@
 			padding: 20px 0 21px 0
 
 		&__content
-			padding: 20px 0
+			padding: 24px 0 16px 0
 
 		&__creators
 			flex-direction: column
@@ -1430,11 +1493,13 @@
 			margin-bottom: 0px
 
 		&__link
+			width: 35%
+
 			margin-left: 21px
 
 			&::after
 				width: 90%
-				bottom: 4px
+				bottom: 10px
 
 		&__info
 			width: inherit
@@ -1453,25 +1518,31 @@
 
 			transform: translate(0px)
 
-		.swiper-pagination-bullet
-			width: 10px
-			height: 10px
+		.swiper
+			&-pagination-bullet
+				width: 10px
+				height: 10px
 
-			margin: 0 !important
+				margin: 0 !important
 
-			opacity: 1
-			background: #cacaca
+				opacity: 1
+				background: #cacaca
 
-			&:not(:last-child)
-				margin-right: 15px !important
+				&:not(:last-child)
+					margin-right: 15px !important
 
-			&-active
-				background: #666
+				&-active
+					background: #666
+
+			&-slide
+				height: auto !important
 
 	// edition
 	.edition
 		background: url('../img/edition__bg--320.jpg')
 		// background-size: cover
+
+		margin-bottom: 55px
 
 		&Swiper
 			display: none
@@ -1480,12 +1551,12 @@
 				display: block
 
 		&__inner
-			padding-top: 55px
+			padding-top: 56px
 			padding-bottom: 43px
-			margin-bottom: 54px
+			// margin-bottom: 54px
 
 		&__menu
-			margin-bottom: 49px
+			margin-bottom: 48px
 
 		&__swiper
 			padding-top: 0px
@@ -1502,9 +1573,11 @@
 
 		&__legend
 			width: 100%
-			padding: 14px 0 12px 0
+			padding: 14px 0 11px 0
 
 			font-weight: 700
+
+			letter-spacing: -0.7px
 
 			&::before
 				@include pseudo
@@ -1533,7 +1606,7 @@
 
 			// height: 82px
 
-			margin-bottom: 24px
+			margin-bottom: 22px
 
 			overflow: hidden
 
@@ -1596,7 +1669,7 @@
 					background: rgba(255, 255, 255, 0.5)
 
 			&--label
-				max-width: 320px
+				// max-width: 320px
 
 				display: block
 
@@ -1706,13 +1779,15 @@
 		height: 320px !important
 
 	.contacts
+		margin-bottom: 30px
+
 		&__menu
 			height: 320px !important
 			padding: 6px 14px 0 14px
 
 		&__map
 			padding: 0
-			margin-bottom: 21px
+			margin-bottom: 24px
 
 		&__paragraph
 			margin-bottom: 16px !important

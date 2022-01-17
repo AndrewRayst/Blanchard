@@ -109,6 +109,12 @@ export default () => {
 			if ( input.checked === false ) input.checked = true
 	
 			else input.checked = false
+
+			if ( !categoryBtn.classList.contains( `edition__legend--active` ) ) {
+	
+				category.style.height = `${ ( categoryItemHeight * document.querySelectorAll( `.checkbox--active` ).length ) + categoryItemHeight }px`
+	
+			}
 	
 		}
 	

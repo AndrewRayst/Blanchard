@@ -21,13 +21,13 @@
 		width: 18px
 		height: 18px
 
-		margin: 0 2px 0 5px
+		margin: 0 5px 0 3px
 
 		cursor: pointer
 		user-select: none
 
 		display: inline-block
-		transform: translate(-4px, 5px)
+		transform: translate(0, 5px)
 
 		&:focus
 			svg
@@ -102,7 +102,7 @@
 	&__partners
 		display: flex
 		min-width: 0
-		height: 150px
+		height: 152px
 
 	.swiper-button-disabled svg
 		background: #ececec !important
@@ -150,6 +150,9 @@
 	&__slide
 		cursor: pointer
 		user-select: none
+
+		border: 2px solid #cacaca
+
 		filter: grayscale(1) brightness(1.2)
 
 		transition: filter .2s ease-in-out
@@ -159,7 +162,6 @@
 			height: auto
 
 			user-select: none
-			border: 2px solid transparent
 
 			opacity: .6
 
@@ -172,15 +174,14 @@
 				opacity: 1
 
 		&:active
-			img
-				border-color: #9d5cd0 !important
+			border-color: #9d5cd0 !important
 
 		&:focus
-			img
-				border-color: #9d5cd0 !important
+			border-color: #9d5cd0 !important
 
 .projectsSwiper
 	width: 100%
+	height: 102%
 
 .tippy-content
 	max-width: 285px

@@ -156,7 +156,36 @@ export default ( Inputmask ) => {
 
 		}
 
-		if ( proof ) event.target.submit()
+		if ( proof ) {
+
+			let formDate = new FormData( form )
+
+			// let formDate = {}
+
+			// form.querySelectorAll( `.contacts__input` ).forEach( input => {
+
+			// 	formDate[`${input.name}`] = input.value
+
+			// } )
+
+			let xhr = new XMLHttpRequest()
+
+			xhr.onreadystatechange = function() {
+
+				if ( xhr.readyState === 4 && xhr.status === 200 ) {
+
+					form.reset()
+
+					alert( `Заявка отправлена, с вами скоро свяжутся` )
+
+				}
+
+			}
+
+			xhr.open( `POST`, `mail.php`, true )
+			xhr.send( formDate )
+
+		}
 
 	} )
 

@@ -9,6 +9,9 @@ export default () => {
 		const gallery = document.querySelector( `.gallery` )
 		const modalImg = document.querySelector( `.gallery-modal__img` )
 
+		const SECTIONS = document.querySelectorAll( `section` )
+		const BODY = document.querySelector( `body` )
+
 		gallery.scrollIntoView( {
 
 			behavior: `smooth`,
@@ -26,13 +29,29 @@ export default () => {
 
 		modal.style.display = 'block'
 
-		document.querySelector( `body` ).style.background = `rgba(0,0,0,.6)`
+		BODY.style.background = `rgba(0, 0, 0, .6)`
+
+		SECTIONS.forEach( section => {
+
+			if ( !section.classList.contains(`gallery`) ) {
+
+				section.style.filter = `brightness(.5)`
+
+			}
+
+		} )
 
 		modalExit.addEventListener( `keydown`, event => {
 
 			if ( event.keyCode === 13 ) {
 
-				document.querySelector( `body` ).style.background = ``
+				BODY.style.background = ``
+
+				SECTIONS.forEach( section => {
+
+					section.style.filter = ``
+
+				} )
 
 				modal.style.display = ''
 				target.focus()
@@ -50,7 +69,13 @@ export default () => {
 
 		modalExit.addEventListener( `click`, () => {
 
-			document.querySelector( `body` ).style.background = ``
+			BODY.style.background = ``
+
+			SECTIONS.forEach( section => {
+
+				section.style.filter = ``
+
+			} )
 
 			modal.style.display = ''
 			target.focus()

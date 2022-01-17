@@ -2,7 +2,6 @@ export default () => {
 
 	const accordionItems = document.querySelectorAll( `.accordion__item` )
 	const creators = document.querySelectorAll( `.accordion__creator` )
-	const catalogPersons = document.querySelector( `.catalog__persons` )
 	const languages = document.querySelectorAll( `.catalog__languages-item` )
 
 	function clouseAccordion() {
@@ -135,7 +134,7 @@ export default () => {
 
 			const creators = item.querySelectorAll( `[data-accordion__tabindex]` )
 
-			if ( content.style.maxHeight === `700px` || item.classList.contains( `accordion__item--active` ) ) {
+			if ( content.style.maxHeight === `810px` || item.classList.contains( `accordion__item--active` ) ) {
 
 				item.classList.remove( `accordion__item--active` )
 
@@ -152,7 +151,7 @@ export default () => {
 
 				item.classList.add( `accordion__item--active` )
 
-				content.style.maxHeight = `700px`
+				content.style.maxHeight = `810px`
 				content.style.padding = ``
 
 				creators.forEach( item => item.tabIndex = 0 )
@@ -169,7 +168,7 @@ export default () => {
 
 				const creators = item.querySelectorAll( `[data-accordion__tabindex]` )
 
-				if ( content.style.maxHeight === `700px` || item.classList.contains( `accordion__item--active` ) ) {
+				if ( content.style.maxHeight === `810px` || item.classList.contains( `accordion__item--active` ) ) {
 
 					item.classList.remove( `accordion__item--active` )
 
@@ -185,7 +184,7 @@ export default () => {
 
 					item.classList.add( `accordion__item--active` )
 
-					content.style.maxHeight = `700px`
+					content.style.maxHeight = `810px`
 					content.style.padding = ``
 
 					creators.forEach( item => item.tabIndex = 0 )
@@ -232,6 +231,19 @@ export default () => {
 				personInfo( creatorName.textContent, catalog )
 
 				creator.classList.toggle( `accordion__creator--active` )
+
+				if ( window.innerWidth <= 425 ) {
+
+					const PERSON_CARD = catalog.querySelector( `.catalog__person--curent` )
+
+					PERSON_CARD.scrollIntoView( {
+
+						behavior: `smooth`,
+						block: `start`,
+
+					} )
+
+				}
 
 			}
 
