@@ -18,6 +18,8 @@ export default ( Swiper, SwiperCore ) => {
 
 			el: `.events__pagination`,
 			type: `bullets`,
+			clickable: true,
+
 		},
 
 	} )

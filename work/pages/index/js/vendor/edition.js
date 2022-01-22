@@ -115,19 +115,24 @@ export default ( Swiper, SwiperCore ) => {
 
 	function swiperIndex() {
 
-		gallerySlides.forEach( el => el.tabIndex = -1 )
+		if ( window.innerWidth > 425 ) {
 
-		const count = swiperIndexCount()
-
-		for ( let i = ( swiperPage - 1 ) * count; i < count * swiperPage; i++ ) {
-
-			if ( i < gallerySlides.length ) {
-
-				gallerySlides[i].tabIndex = 0
-
+			gallerySlides.forEach( el => el.tabIndex = -1 )
+	
+			const count = swiperIndexCount()
+	
+			for ( let i = ( swiperPage - 1 ) * count; i < count * swiperPage; i++ ) {
+	
+				if ( i < gallerySlides.length ) {
+	
+					gallerySlides[i].tabIndex = 0
+	
+				}
+	
 			}
 
 		}
+
 
 	}
 

@@ -158,27 +158,49 @@ export default ( Inputmask ) => {
 
 		if ( proof ) {
 
+			const POPUP = document.querySelector( `.contacts__popup` )
+			const POPUP_WAIT = document.querySelector( `.contacts__popup--wait` )
+			const POPUP_OK = document.querySelector( `.contacts__popup--ok` )
+			const POPUP_ERROR = document.querySelector( `.contacts__popup--error` )
+
+			function popupСlose() {
+
+				setTimeout( () => {
+
+					POPUP.style.display = `none`
+					POPUP_WAIT.style.display = `block`
+					POPUP_OK.classList.remove( `contacts__popup--ok--active` )
+					POPUP_ERROR.classList.remove( `contacts__popup--ok--active` )
+
+				}, 1000 )
+
+			}
+
+			POPUP.style.display = `flex`
+
 			let formDate = new FormData( form )
-
-			// let formDate = {}
-
-			// form.querySelectorAll( `.contacts__input` ).forEach( input => {
-
-			// 	formDate[`${input.name}`] = input.value
-
-			// } )
 
 			let xhr = new XMLHttpRequest()
 
-			xhr.onreadystatechange = function() {
+			xhr.onreadystatechange = () => {
 
-				if ( xhr.readyState === 4 && xhr.status === 200 ) {
+				if ( xhr.readyState === 2 && xhr.status === 200 ) {
 
-					form.reset()
-
-					alert( `Заявка отправлена, с вами скоро свяжутся` )
+					POPUP_WAIT.style.display = `none`
+					POPUP_OK.classList.add( `contacts__popup--ok--active` )
 
 				}
+
+				else if ( xhr.readyState === 2 && xhr.status === 404 ) {
+
+					POPUP_WAIT.style.display = `none`
+					POPUP_ERROR.classList.add( `contacts__popup--error--active` )
+
+				}
+
+				else if ( xhr.readyState === 4 && xhr.status === 200 ) popupСlose()
+
+				else if ( xhr.readyState === 4 && xhr.status === 404 ) popupСlose()
 
 			}
 
