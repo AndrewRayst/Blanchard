@@ -1,6 +1,7 @@
 @media screen and ( max-width: 1400px )
 	.container
-		max-width: p(1288,1400)
+		padding-right: 35px
+		padding-left: 35px
 
 	// header
 	.nav__item:not(:last-child)
@@ -25,7 +26,7 @@
 		transform: translateX(85%)
 
 		&__input
-			width: 15.5vw
+			width: 16vw
 
 	// hero
 	.hero
@@ -42,7 +43,7 @@
 
 	.gallery
 		&-modal
-			padding: 15% 18.5% 11%
+			padding: 15% 19% 11%
 
 		&Swiper
 			width: 100%
@@ -76,7 +77,7 @@
 	// contacts
 	.contacts
 		&__menu
-			padding: 90px 90px 110px calc((100% * 0.08) / 2)
+			padding: 90px 90px 110px 4%
 
 		&__map
 			width: 51%
@@ -84,10 +85,12 @@
 @media screen and ( max-width: 1024px )
 
 	.container
-		max-width: p(924, 1024)
+		// max-width: 1024px
+		padding-right: 50px
+		padding-left: 50px
 
 	section
-		margin-bottom: p(80, 924)
+		margin-bottom: 87px
 
 	.text
 		width: 100%
@@ -103,11 +106,20 @@
 
 		&--menu
 			display: block
+			margin-bottom: 14%
 
 			.nav__list
 				display: flex
 
 				flex-direction: column
+
+		&__link
+			font-size: 24px
+
+		&__item
+
+			&:not(:last-child)
+				margin-bottom: 11vh
 
 	.signIn
 		display: none
@@ -127,13 +139,15 @@
 
 			border: 2px solid #9d5cd0
 
+			padding: 18px 93px
+
 			&--cross
 				display: block
 
 				width: 29px
 				height: 29px
 
-				margin-bottom: 5.4%
+				margin-bottom: 5%
 
 				transform: translateX(0px)
 
@@ -145,18 +159,6 @@
 				fill: white
 
 				transform: translateX(-45%)
-
-	.nav
-		&__link
-			font-size: 24px
-
-		&__item
-
-			&:not(:last-child)
-				margin-bottom: 4.3%
-
-		&--menu
-			margin-bottom: 14.7%
 
 	.search
 		margin-bottom: 4px
@@ -174,7 +176,7 @@
 			display: block
 
 		&__input
-			width: 21.6vw
+			width: 22vw
 
 	.burger
 		display: block
@@ -182,15 +184,17 @@
 	// hero
 	.hero
 		&__inner
-			padding: 212px 0 10.5% 0
+			padding: 212px 0 11% 0
 
 		&__title
-			width: p(585, 924)
+			max-width: 585px
+			width: 100%
 			margin: 0 0 10px 0
 
 		&__subtitle
-			width: p(661, 924)
-			margin-bottom: 12.3vw
+			max-width: 661px
+			width: 100%
+			margin-bottom: 12vw
 
 		&-swiper--container
 			height: 768px
@@ -231,12 +235,12 @@
 			padding-bottom: 70px
 
 		&__left
-			flex: 0 1 35.714%
+			flex: 0 1 36%
 
 			padding-right: 50px
 
 		&__right
-			flex: 0 1 64.2857%
+			flex: 0 1 64%
 			height: auto
 
 		&-slide
@@ -251,7 +255,7 @@
 			margin-bottom: 364px
 
 		&-modal
-			padding: p(309, 1920) p(403.2, 1920) p(146, 1920)
+			padding: 16% 21% 8%
 
 			&__img
 				flex: 0 1 94%
@@ -266,17 +270,17 @@
 					transform: translateX(-25%)
 
 			&__info
-				padding-top: 21.3%
+				padding-top: 21%
 
 			&__name
 				margin-bottom: 2%
 
 			&__author
-				margin-bottom: p(48, 1920)
+				margin-bottom: 10px
 
 			&__since
 
-				margin-bottom: 12.5%
+				margin-bottom: 12%
 
 			&__description
 				width: 80%
@@ -308,13 +312,6 @@
 
 		&__paragraph
 			padding-right: 0px
-
-	// .accordion
-	// 	&__creator
-	// 		position: relative
-
-	// 		flex: 0 1 50%
-	// 		line-height: 26px
 
 	// events
 	.events
@@ -351,7 +348,7 @@
 
 		&__link
 			margin-left: 26px
-			width: p(100, 290)
+			width: 34%
 
 			&::after
 				width: 88%
@@ -363,10 +360,9 @@
 			height: 200px
 
 		&-btn__box
-			top: 105.5%
+			top: 105%
 
 	// edition
-
 	.edition
 		background: url('../img/edition__bg--1024.jpg')
 		background-size: cover
@@ -397,10 +393,10 @@
 				margin-bottom: 14px
 
 		&__menu
-			flex: 0 1 p(295, 924)
+			flex: 0 1 32%
 
 		&__swiper
-			flex: 0 1 p(629, 924)
+			flex: 0 1 68%
 
 	// projects
 
@@ -416,11 +412,7 @@
 		&__paragraph
 			margin-bottom: 24px
 
-		&__i
-			margin: 0 5px 0 0px
-
 		&__link
-			letter-spacing: 0.2px
 			padding: 2px 3px
 
 		&__partners
@@ -479,7 +471,7 @@
 					height: 74px
 
 		&__map
-			width: 52.44140625%
+			width: 52%
 			min-height: 693px
 
 			overflow: hidden
@@ -506,42 +498,39 @@
 
 @media screen and ( max-width: 924px )
 
-	.container
-		max-width: p(803.6875, 924)
-
 	section
-		margin-bottom: p(80, 668)
+		margin-bottom: 80px
 
 	// .text
 	// 	width: 100%
 
 	// header
 	.search
-		transform: translateX(-1.8%)
+		transform: translateX(-2%)
 
 		background: transparent !important
 
 		&__btn
 			&--1024
-				transform: translate(-1px, -4px)
+				transform: translate(-3px, -4px)
 
 			&--cross
 				display: block !important
 
 		&__input
 			width: 75vw
-			margin-right: 3.3vw
+			margin-right: 3vw
 
 		&--1024
 			width: 34px
 			height: 26px
 
 			.search
-				transform: translateX(0.8%) !important
+				transform: translateX(1%) !important
 
 	.header
 		&__btn--cross
-			margin-bottom: 7.4%
+			margin-bottom: 7%
 
 		&__up
 			padding: 28px 0 27px 0
@@ -551,22 +540,22 @@
 			margin-bottom: 6%
 
 		&--menu
-			margin-bottom: 19.9%
+			margin-bottom: 20%
 
 	// hero
 	.hero
-		margin-bottom: 11.4%
+		margin-bottom: 12%
 
 		&__inner
-			padding-bottom: 13.9%
+			padding-bottom: 14%
 
 		&__title
-			width: p(585, 668)
+			max-width: 585px
 			margin: 0 0 10px 0
 
 		&__subtitle
-			width: p(661, 668)
-			margin-bottom: 16.5vw
+			max-width: 661px
+			margin-bottom: 16vw
 
 		&__slide--1
 			background: url('../img/hero-bg__1--768.jpg')
@@ -619,7 +608,7 @@
 			margin-bottom: 364px
 
 		&-modal
-			padding: 76.2vh 6.5% 13.2%
+			padding: 53vw 7% 13%
 
 			&__img
 				flex: 0 1 94%
@@ -713,7 +702,7 @@
 			gap: 52px 32px
 
 		&__card
-			flex: 0 1 p(317, 668)
+			flex: 0 1 47%
 			// height: 683px
 
 			padding-bottom: 41px
@@ -726,7 +715,7 @@
 
 		&__link
 			margin-left: 26px
-			width: p(100, 290)
+			width: 34%
 
 			&::after
 				width: 87px
@@ -797,11 +786,11 @@
 
 			&:nth-child(3)
 				.edition__checkbox--container
-					margin-bottom: 6.5%
+					margin-bottom: 6%
 
 			&:last-child
 				.edition__checkbox--container
-					margin-bottom: 8.8%
+					margin-bottom: 9%
 
 		&__sets
 			display: flex
@@ -849,14 +838,7 @@
 			overflow: hidden
 
 			img
-				width: 117%
-				height: 100%
-
-				transform: translateX(-18px)
-
-			&:first-child
-				img
-					transform: translateX(-7%) scale(1.3)
+				height: 36%
 
 		&__button--prev
 			margin-right: 21px
@@ -902,16 +884,19 @@
 				height: 10vw
 
 @media ( max-width: 668px )
-	// .container
-	// 	margin: 0 7.48vw
 
 	.heading--mini
-		font-size: 22px
+		font-size: 24px
 		line-height: 32px
 
 	.text
 		font-size: 14px
 		line-height: 28px
+
+	// header
+	.search
+		&__input
+			width: 70vw !important
 
 	// hero
 	.hero
@@ -943,7 +928,7 @@
 			justify-content: center
 
 		&-modal
-			padding: 30vh 6.5% 13.2%
+			padding: 30vh 7% 13%
 
 			&__inner
 				height: inherit
@@ -955,14 +940,13 @@
 
 				img
 					width: 145%
-					transform: translateX(-12.5%)
+					transform: translateX(-12%)
 
 			&__info
 				flex: 0 1 30%
 				padding: 7% 3%
 
 			&__exit
-				top: .3%
 
 				z-index: 1
 
@@ -989,7 +973,7 @@
 		&-slide
 			img
 				width: 100%
-				height: 109.4594594594595%
+				height: 109%
 
 		&__btns
 			justify-content: center
@@ -1127,8 +1111,8 @@
 			flex-direction: column-reverse
 
 		.logo
-			width: 96.7px
-			height: 21.67px
+			width: 97px
+			height: 22px
 
 		.socials
 			margin-bottom: 20px
@@ -1136,10 +1120,12 @@
 @media ( max-width: 425px )
 
 	.container
-		max-width: p(385.15625, 425)
+		// max-width: 320px
+		padding-right: 15px
+		padding-left: 15px
 
 	section
-		margin-bottom: p(50, 290)
+		margin-bottom: 50px
 
 	.text
 		width: 100%
@@ -1186,9 +1172,10 @@
 
 		&__btn
 			font-size: 12px
+			padding: 12px 32px
 
 			&--cross
-				margin-bottom: 8.3% !important
+				margin-bottom: 8% !important
 
 				transform: translateX(0px) !important
 
@@ -1210,20 +1197,23 @@
 			font-size: 16px
 
 		&__item:not(:last-child)
-			margin-bottom: 5.5%
+			margin-bottom: 5vw
 
 		&--menu
-			margin-bottom: 9.4%
+			margin-bottom: 9%
 
 	.groups
 		display: none
 
 	.logo
-		width: 96.8px
-		height: 21.7px
+		width: 97px
+		height: 22px
 
 	.search
 		transform: translateX(0%)
+
+		&__input
+			padding: 0
 
 		&__btn
 			&--cross
@@ -1288,13 +1278,13 @@
 
 	// hero
 	.hero
-		margin-bottom: 17.2%
+		margin-bottom: 17%
 
 		&-swiper--container
 			height: 355px
 
 		&__inner
-			padding: 76px 0 11.5% 0
+			padding: 76px 0 12% 0
 
 		&__title
 			width: 100%
@@ -1302,7 +1292,7 @@
 			margin-bottom: 9px
 
 			font-size: 32px
-			line-height: 40.58px
+			line-height: 40px
 
 			text-align: center
 
@@ -1325,7 +1315,7 @@
 
 		.btn__box
 			margin-left: 25%
-			transform: translateX(-15.5%)
+			transform: translateX(-16%)
 
 		&__slide--1
 			background: url('../img/hero-bg__1--320.jpg')
@@ -1387,11 +1377,8 @@
 			&--768
 				margin-top: 0px
 
-			&--link
-				letter-spacing: 0.4px
-
 		&-modal
-			padding: 54.5vh 5% 0%
+			padding: 92vw 5% 0%
 
 			&__inner
 				height: 107%
@@ -1408,10 +1395,10 @@
 
 			&__info
 				flex: 0 1 auto
-				padding: 6.3% 6.1%
+				padding: 6% 6%
 
 			&__exit
-				top: -.9%
+				top: -1%
 				right: -2%
 
 			&__since
@@ -1455,14 +1442,13 @@
 			margin-bottom: 9px
 
 		&-accordion
-			margin-bottom: 51.8px
+			margin-bottom: 52px
 
 		&__img
 			margin-bottom: 20px
 
 		&__heading--mini
 			margin-bottom: 16px
-			letter-spacing: 1.25px
 
 		&__paragraph
 			width: 99%
@@ -1520,8 +1506,6 @@
 			margin-bottom: 3px
 
 		&__heading--mini
-			letter-spacing: 1.25px
-
 			margin-right: 0px
 			margin-left: 28px
 			margin-bottom: 37px
@@ -1536,7 +1520,7 @@
 			margin-bottom: 0px
 
 		&__link
-			width: 7.2rem
+			width: 7rem
 
 			margin-left: 21px
 
@@ -1550,7 +1534,7 @@
 
 		&__info
 			width: inherit
-			margin-bottom: 19.9%
+			margin-bottom: 20%
 
 		&-btn
 			&__box
@@ -1624,8 +1608,6 @@
 
 			font-weight: 700
 
-			letter-spacing: -0.7px
-
 			&::before
 				@include pseudo
 				top: 2px
@@ -1680,8 +1662,8 @@
 					right: 0%
 
 					top: 31%
-					width: 30.34px
-					height: 21.34px
+					width: 30px
+					height: 21px
 
 					background: url('../img/sprite.svg#arrow__down') no-repeat
 					background-size: cover
@@ -1800,21 +1782,19 @@
 				margin-bottom: 10px !important
 
 		&__paragraph
-			letter-spacing: 1.1px
-			line-height: 31.97px
+			line-height: 32px
 
 			margin-bottom: 7px
 			margin-left: 2px
 
-		&__i
-			margin: 0 0 0 4px
+			font-size: 16px
 
-			&:first-child
-				transform: translate(-6px, 5px)
+		&__slide
+			img
+				height: 39%
 
 		&__link
 			padding: 2px 0
-			letter-spacing: 0.2px
 
 		&__partners
 			height: 20vw
@@ -1825,11 +1805,6 @@
 
 			&--next
 				margin-left: 18px
-
-		// &__slide
-		// 	img
-		// 		width: 195px
-		// 		height: 65px
 
 	// contacts
 	.ymaps-2-1-79-map,

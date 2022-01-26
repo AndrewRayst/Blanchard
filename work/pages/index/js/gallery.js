@@ -6,13 +6,13 @@ export default () => {
 	function slideModal( target ) {
 
 		const modalExit = document.querySelector( `.gallery-modal__exit` )
-		const gallery = document.querySelector( `.gallery` )
+		const galleryModalInner = document.querySelector( `.gallery-modal__inner` )
 		const modalImg = document.querySelector( `.gallery-modal__img` )
 
 		const SECTIONS = document.querySelectorAll( `section` )
 		const BODY = document.querySelector( `body` )
 
-		gallery.scrollIntoView( {
+		galleryModalInner.scrollIntoView( {
 
 			behavior: `smooth`,
 			block: `start`,
