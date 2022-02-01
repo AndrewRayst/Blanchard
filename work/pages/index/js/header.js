@@ -9,7 +9,7 @@ export default () => {
 
 	const burger = document.querySelector( `.burger` )
 	const menuCross = document.querySelector( `.header__btn--cross` )
-	const menu = document.querySelector( `.header__menu` )
+	const menu = document.querySelector( `.hero__menu` )
 
 	const headerInner = document.querySelector( `.header__inner` )
 	const headerDown = document.querySelector( `.header__down` )
@@ -39,15 +39,36 @@ export default () => {
 
 	// groups
 
+	window.addEventListener( `resize`, () => {
+
+		if ( window.innerWidth > 1400 ) {
+
+			const HEADER_DOWN = document.querySelector( `.header__down` )
+			const HEADER_INNER = HEADER_DOWN.querySelector( `.header__inner` )
+			const SEARCH = HEADER_DOWN.querySelector( `.search` )
+
+			HEADER_INNER.classList.remove( `header__inner--hide` )
+			SEARCH.classList.remove( `search--active` )
+
+			groups.forEach( group => {
+
+				group.classList.remove( `group--search` )
+
+			} )
+
+		}
+
+	}, { passive: true } )
+
 	function groupFocusFirstElement( event ) {
 
 		if ( event.keyCode === 9 && event.shiftKey === true ) {
-	
+
 			event.preventDefault()
 
 			document.querySelector( `.group--active` ).children[0].focus()
 
-		} 
+		}
 
 	}
 
@@ -64,21 +85,21 @@ export default () => {
 		const items = group.nextElementSibling.querySelectorAll( `.group__item` )
 
 		if ( mode === `on` ) {
-	
+
 			let indexStart = 700
-	
+
 			for ( let index = 0; index < items.length; index++ ) {
-	
+
 				items[index].tabIndex = indexStart
-	
+
 				++indexStart
-	
+
 			}
-	
+
 			items[0].addEventListener( `keydown`, event => groupFocusFirstElement( event ) )
 
 			items[0].focus()
-	
+
 			items[items.length - 1].addEventListener( `keydown`, event => {
 
 				groupFocusLastElement( event )
@@ -211,9 +232,28 @@ export default () => {
 
 			if ( window.innerWidth <= 1400 && window.innerWidth > 1024 ) {
 
+				const HEADER_DOWN = document.querySelector( `.header__down	` )
+				const HEADER_INNER = HEADER_DOWN.querySelector( `.header__inner` )
+				const GROUP_BOX = HEADER_DOWN.querySelectorAll( `.group__box` )
+
+				HEADER_INNER.classList.toggle( `header__inner--hide` )
+
 				event.currentTarget.parentElement.classList.toggle( `search--active` )
 
-				groups.forEach( group => group.classList.toggle( `group--search` ) )
+				groups.forEach( group => {
+
+					group.classList.toggle( `group--search` )
+					group.classList.remove( `group--active` )
+
+				} )
+
+				GROUP_BOX.forEach( groupBox => {
+
+					groupBox.style.transition = `max-height .1s ease-in-out, padding .1s ease-in-out`
+					groupBox.style.maxHeight = ``
+					groupBox.style.padding = ``
+
+				} )
 
 			}
 
@@ -293,6 +333,6 @@ export default () => {
 
 	menuCross.addEventListener( `click`, () => menu.style.transform = '' )
 
-	burger.addEventListener( `click`, () => menu.style.transform = 'translateY(0)' )
+	burger.addEventListener( `click`, () => menu.style.transform = 'translateY(100%)' )
 
 }

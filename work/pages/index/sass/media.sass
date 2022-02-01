@@ -4,8 +4,12 @@
 		padding-left: 35px
 
 	// header
-	.nav__item:not(:last-child)
-		margin-right: 1vw
+	.nav
+		&__item:not(:last-child)
+			margin-right: 1vw
+
+		&__link
+			font-size: 18px
 
 	.group
 		display: flex
@@ -13,17 +17,19 @@
 		&__title
 			display: flex
 
-		// &:not(:last-child)
-		// 	margin-right: 12%
+		&:not(:last-child)
+			margin-right: 4vw
+
+		&:last-child > &__box
+			transform: translateX(-10vw)
 
 		&__icon
 			transform: translate(6px, 3px)
 
-	.header__inner
-		overflow: hidden
-
 	.search
-		transform: translateX(85%)
+		width: 3%
+
+		overflow: hidden
 
 		&__input
 			width: 16vw
@@ -117,9 +123,8 @@
 			font-size: 24px
 
 		&__item
-
 			&:not(:last-child)
-				margin-bottom: 11vh
+				margin-bottom: 4vw
 
 	.signIn
 		display: none
@@ -131,8 +136,8 @@
 		&__down
 			display: none
 
-		&__menu
-			display: block
+		&__inner
+			overflow: hidden
 
 		&__btn
 			background: transparent
@@ -161,8 +166,11 @@
 				transform: translateX(-45%)
 
 	.search
+		width: auto
 		margin-bottom: 4px
 		transform: translateY(-4px)
+
+		overflow: visible
 
 		&__btn
 			&--1024
@@ -210,6 +218,9 @@
 		&__slide--3
 			background: url('../img/hero-bg__3--1024.jpg')
 			background-size: cover
+
+		&__menu
+			display: block
 
 	// about
 	.about
@@ -676,8 +687,8 @@
 			margin-bottom: 54px
 
 	.accordion
-		&__item:first-child
-			margin-bottom: 30px
+		&__item:first-child > &__content
+			padding: 28px 0 57px 0
 
 		&__creator
 			flex: 0 1 33%
@@ -894,6 +905,11 @@
 		line-height: 28px
 
 	// header
+	.header
+		&__btn
+			&--cross
+				margin-bottom: 10% !important
+
 	.search
 		&__input
 			width: 70vw !important
@@ -1175,7 +1191,7 @@
 			padding: 12px 32px
 
 			&--cross
-				margin-bottom: 8% !important
+				margin-bottom: 24px !important
 
 				transform: translateX(0px) !important
 
@@ -1197,7 +1213,7 @@
 			font-size: 16px
 
 		&__item:not(:last-child)
-			margin-bottom: 5vw
+			margin-bottom: 16px
 
 		&--menu
 			margin-bottom: 9%
@@ -1328,6 +1344,9 @@
 		&__slide--3
 			background: url('../img/hero-bg__3--320.jpg')
 			background-size: cover
+
+		&__menu
+			padding: 15px 0 27px 0
 
 	// about
 	.about

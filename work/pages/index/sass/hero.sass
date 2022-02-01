@@ -79,3 +79,25 @@
 
 		&:active
 			background: #7943a4
+
+	&__menu
+		display: none
+		position: absolute
+		bottom: 100%
+		left: 0
+
+		width: 100vw
+		height: 100%
+
+		padding: 37px 0 51px 0
+
+		background: rgba(0, 0, 0, .9)
+
+		z-index: 11
+
+		transform: translateY(-100%)
+
+		transition: transform .3s ease-in-out
+
+		.header__btn--cross
+			display: block !important
